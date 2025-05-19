@@ -1,0 +1,842 @@
+:root {
+    /* Light theme (default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-tertiary: #495057;
+    --text-muted: #6c757d;
+    --text-light: #f8f9fa;
+    --text-dark: #212529;
+    --border-color: #dee2e6;
+    --card-bg: #ffffff;
+    --card-border: #dee2e6;
+    --hover-bg: #e9ecef;
+    --primary-color: #0d6efd;
+    --primary-hover: #0b5ed7;
+    --success-color: #198754;
+    --info-color: #0dcaf0;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+    --input-focus: #86b7fe;
+}
+
+[data-theme="dark"] {
+    /* Dark theme - Using a sophisticated dark palette */
+    --bg-primary: #1a1d21;
+    --bg-secondary: #2c3034;
+    --bg-tertiary: #373b3e;
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --text-tertiary: #ced4da;
+    --text-muted: #adb5bd;
+    --text-light: #f8f9fa;
+    --text-dark: #e9ecef;
+    --border-color: #495057;
+    --card-bg: #2c3034;
+    --card-border: #373b3e;
+    --hover-bg: #373b3e;
+    --primary-color: #3d8bfd;
+    --primary-hover: #4d9bff;
+    --success-color: #2ea043;
+    --info-color: #2fb8d9;
+    --warning-color: #ffd43b;
+    --danger-color: #f85149;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --input-bg: #2c3034;
+    --input-border: #495057;
+    --input-focus: #3d8bfd;
+}
+
+/* Base styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 60px; /* Adjust based on footer height */
+}
+
+main {
+    flex: 1 0 auto;
+    padding-bottom: 1rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+}
+
+p {
+    color: var(--text-primary);
+}
+
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-light {
+    color: var(--text-light) !important;
+}
+
+.text-dark {
+    color: var(--text-dark) !important;
+}
+
+/* Card styles */
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.card-header {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.card-title {
+    color: var(--text-primary);
+}
+
+.card-text {
+    color: var(--text-primary);
+}
+
+/* Table styles */
+.table {
+    color: var(--text-primary);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--hover-bg);
+}
+
+.table td, .table th {
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.table thead th {
+    color: var(--text-primary);
+    border-bottom-color: var(--border-color);
+}
+
+/* Form elements */
+.form-control {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-primary);
+}
+
+.form-control:focus {
+    background-color: var(--input-bg);
+    border-color: var(--input-focus);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--input-focus), 0.25);
+}
+
+.form-label {
+    color: var(--text-primary);
+}
+
+.form-text {
+    color: var(--text-muted);
+}
+
+/* Button styles */
+.btn-light {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-light:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Badge styles */
+.badge.bg-light {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+.badge.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: var(--text-light) !important;
+}
+
+/* List group styles */
+.list-group-item {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.list-group-item-action:hover {
+    background-color: var(--hover-bg);
+    color: var(--text-primary);
+}
+
+/* Progress bar styles */
+.progress {
+    background-color: var(--bg-secondary);
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+/* Alert styles */
+.alert {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.alert-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: var(--text-light);
+}
+
+.alert-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: var(--text-light);
+}
+
+.alert-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: var(--text-dark);
+}
+
+.alert-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+    color: var(--text-dark);
+}
+
+/* Navbar styles */
+[data-theme="dark"] .navbar {
+    background-color: var(--bg-tertiary) !important;
+}
+
+[data-theme="dark"] .navbar-dark .navbar-nav .nav-link {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar-brand {
+    color: var(--text-light) !important;
+}
+
+/* Modal styles */
+.modal-content {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.modal-header {
+    border-bottom-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.modal-footer {
+    border-top-color: var(--border-color);
+}
+
+.modal-title {
+    color: var(--text-primary);
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+.dropdown-item {
+    color: var(--text-primary);
+}
+
+.dropdown-item:hover {
+    background-color: var(--hover-bg);
+    color: var(--text-primary);
+}
+
+.dropdown-divider {
+    border-color: var(--border-color);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* Additional utility classes */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.text-danger {
+    color: var(--danger-color) !important;
+}
+
+.text-warning {
+    color: var(--warning-color) !important;
+}
+
+.text-info {
+    color: var(--info-color) !important;
+}
+
+/* Small text and captions */
+small, .small {
+    color: var(--text-muted);
+}
+
+/* Links in text */
+.text-body {
+    color: var(--text-primary) !important;
+}
+
+/* Placeholder text */
+::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 1;
+}
+
+/* Selection color */
+::selection {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Theme toggle button in header */
+#toggleTheme {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+#toggleTheme:hover {
+    transform: scale(1.1);
+    background-color: var(--hover-bg);
+}
+
+/* Border styles */
+.border {
+    border-color: var(--border-color) !important;
+}
+
+/* Button styles */
+.btn-light {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-light:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Form elements */
+.form-control {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-primary);
+}
+
+.form-control:focus {
+    background-color: var(--input-bg);
+    border-color: var(--input-focus);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--input-focus), 0.25);
+}
+
+/* Badge styles */
+.badge.bg-light {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* List group styles */
+.list-group-item {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+/* Progress bar styles */
+.progress {
+    background-color: var(--bg-secondary);
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+/* Alert styles */
+.alert {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.alert-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: #fff;
+}
+
+.alert-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: #fff;
+}
+
+.alert-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: #000;
+}
+
+.alert-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+    color: #000;
+}
+
+/* Navbar styles */
+[data-theme="dark"] .navbar {
+    background-color: var(--bg-tertiary) !important;
+}
+
+[data-theme="dark"] .navbar-dark .navbar-nav .nav-link {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Modal styles */
+.modal-content {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+.modal-header {
+    border-bottom-color: var(--border-color);
+}
+
+.modal-footer {
+    border-top-color: var(--border-color);
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+.dropdown-item {
+    color: var(--text-primary);
+}
+
+.dropdown-item:hover {
+    background-color: var(--hover-bg);
+    color: var(--text-primary);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* Dashboard specific styles */
+/* Stats Cards */
+.card.bg-primary,
+.card.bg-success,
+.card.bg-info {
+    color: var(--text-light) !important;
+}
+
+.card.bg-primary .text-uppercase,
+.card.bg-success .text-uppercase,
+.card.bg-info .text-uppercase {
+    color: var(--text-light) !important;
+    opacity: 0.9;
+}
+
+.card.bg-primary .display-6,
+.card.bg-success .display-6,
+.card.bg-info .display-6 {
+    color: var(--text-light) !important;
+    font-weight: 600;
+}
+
+.card.bg-primary .bi,
+.card.bg-success .bi,
+.card.bg-info .bi {
+    color: var(--text-light) !important;
+    opacity: 0.9;
+}
+
+/* Dashboard table styles */
+.table-responsive .table {
+    color: var(--text-primary);
+}
+
+.table-responsive .table th {
+    color: var(--text-primary);
+    border-bottom-color: var(--border-color);
+    font-weight: 600;
+}
+
+.table-responsive .table td {
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.table-responsive .table h6 {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.table-responsive .table small {
+    color: var(--text-muted);
+}
+
+/* Dashboard progress bar */
+.progress {
+    background-color: var(--bg-secondary);
+    height: 5px !important;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+/* Dashboard badge styles */
+.badge.bg-light {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Dashboard list group styles */
+.list-group-item {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.list-group-item .bi {
+    color: var(--success-color);
+}
+
+.list-group-item strong {
+    color: var(--text-primary);
+}
+
+.list-group-item small {
+    color: var(--text-muted);
+}
+
+/* Dashboard card header */
+.card-header.bg-white {
+    background-color: var(--card-bg) !important;
+    border-bottom-color: var(--card-border);
+}
+
+.card-header .card-title {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Dashboard empty state */
+.text-center .bi {
+    color: var(--text-muted);
+}
+
+.text-center p {
+    color: var(--text-primary);
+}
+
+/* Dashboard welcome section */
+.display-5 {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.lead.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Dashboard button styles */
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Stats card specific styles */
+.card.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.card.bg-success {
+    background-color: var(--success-color) !important;
+}
+
+.card.bg-info {
+    background-color: var(--info-color) !important;
+}
+
+/* Course table specific styles */
+.table-hover tbody tr {
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--hover-bg);
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover h6,
+.table-hover tbody tr:hover small {
+    color: var(--text-primary);
+}
+
+/* Course description text */
+.table td small {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+/* Progress text */
+.table td .progress + small {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Course table container */
+.table-responsive {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--card-border);
+    padding: 1rem;
+}
+
+/* Course table header */
+.table thead th {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+    padding: 1rem;
+}
+
+/* Course table cells */
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Course title */
+.table h6 {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+/* Course description */
+.table td small {
+    color: var(--text-muted);
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* Progress bar container */
+.progress {
+    background-color: var(--bg-secondary);
+    height: 5px !important;
+    margin-bottom: 0.25rem;
+}
+
+/* Progress bar */
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+/* Student count badge */
+.badge.bg-light {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    font-weight: 500;
+}
+
+/* Action buttons */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Stats card icons */
+.card .bi.fs-1 {
+    opacity: 0.8;
+    font-size: 2.5rem !important;
+}
+
+/* Stats card numbers */
+.card .display-6 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* Stats card labels */
+.card .text-uppercase {
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+footer .container {
+    padding: 0 1rem;
+}
+
+footer a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+footer p {
+    margin-bottom: 0;
+    color: var(--text-primary);
+}
+
+/* Dashboard specific footer adjustments */
+.dashboard-container {
+    min-height: calc(100vh - 60px); /* Adjust based on your navbar height */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px; /* Adjust based on footer height */
+}
+
+.dashboard-content {
+    flex: 1 0 auto;
+}
