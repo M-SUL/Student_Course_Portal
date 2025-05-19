@@ -68,16 +68,17 @@ A comprehensive learning management system built with PHP and MySQL, featuring a
 3. **Database Setup**
    - Open phpMyAdmin: `http://localhost/phpmyadmin`
    - Create a new database named `student_portal`
-   - Import the database schema from `database/student_portal.sql`
+   - Import the database schema from `sql/portal.sql`
 
 4. **Configuration**
    - Open `db.php` in the root directory
    - Update database credentials if needed:
      ```php
-     $host = 'localhost';
-     $dbname = 'student_portal';
-     $username = 'root';
-     $password = '';
+      $host = 'localhost';
+      $db = 'student_portal';
+      $user = 'root';
+      $pass = 'root';
+      $port = 8889;   // Default MAMP MySQL port
      ```
 
 5. **Access the Portal**
@@ -87,10 +88,12 @@ A comprehensive learning management system built with PHP and MySQL, featuring a
 ## Default Login Credentials
 
 ### Student Account
+Register a new account like:
 - Email: student@example.com
 - Password: password123
 
 ### Admin Account
+Register a new account like:
 - Email: admin@example.com
 - Password: admin123
 
@@ -191,4 +194,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support
 
-For support, email support@studentportal.com or create an issue in the repository. 
+For support, create an issue in the repository. 
