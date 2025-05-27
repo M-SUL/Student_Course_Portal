@@ -1,15 +1,16 @@
-<?php require __DIR__ . '/includes/header.php'; ?>
+<?php require __DIR__ . '/includes/header.ph<?php require DIR . '/includes/header.php'; ?>
 
-<div class="text-center py-5">
+<div class="container text-center py-5">
     <h1 class="display-5 fw-bold">Welcome to the Student Course Portal</h1>
     <p class="lead mb-4">Register for new courses, manage your enrollments, and track your academic journey.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
         <?php if (!isset($_SESSION['student_id'])): ?>
-            <a href="register.php" class="btn btn-success btn-lg px-4 gap-3">
+            <a href="register.php" class="btn btn-success btn-lg px-4 gap-2">
                 <i class="bi bi-pencil-square"></i> Register
             </a>
             <a href="login.php" class="btn btn-outline-light btn-lg px-4">
-                <i class="bi bi-box-arrow-in-right"></i> Log&nbsp;in
+                <i class="bi bi-box-arrow-in-right"></i> Log in
             </a>
         <?php else: ?>
             <a href="dashboard.php" class="btn btn-success btn-lg px-4">
@@ -19,10 +20,11 @@
                 <i class="bi bi-box-arrow-right"></i> Logout
             </a>
         <?php endif; ?>
+
         <a href="courses.php" class="btn btn-primary btn-lg px-4">
             <i class="bi bi-journal-bookmark"></i> Browse Courses
         </a>
     </div>
 </div>
 
-<?php require __DIR__ . '/includes/footer.php'; ?>
+<?php require DIR . '/includes/footer.php'; ?>

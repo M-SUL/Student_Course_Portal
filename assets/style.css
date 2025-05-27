@@ -1,13 +1,20 @@
 /* ────────────────────────────────────────────────
    Global Bootstrap tweaks & custom portal styles
    Put this file at: student-portal/assets/style.css
-────────────────────────────────────────────────‑*/
-
+───────────────────────────────────────
+/* =============================
+   عام - Smooth Scrolling
+============================= */
 html, body {
     scroll-behavior: smooth;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
 }
 
-/* Dark‑mode palette (activated by JS via :root[data-theme="dark"]) */
+/* =============================
+   الوضع الداكن - Dark Mode Palette
+   يُفعّل عبر :root[data-theme="dark"]
+============================= */
 :root[data-theme="dark"] {
     --bs-body-bg: #121212;
     --bs-body-color: #e1e1e1;
@@ -15,43 +22,85 @@ html, body {
     --bs-primary-rgb: 13,110,253;
 }
 
+/* تعديل ألوان الشريط العلوي والتذييل في الوضع الداكن */
 :root[data-theme="dark"] .navbar,
 :root[data-theme="dark"] footer {
     background-color: #1f1f1f !important;
+    color: var(--bs-body-color);
 }
 
-/* Make cards fill equal height in a grid */
+/* =============================
+   البطاقات - Cards
+   لجعل البطاقات بنفس الارتفاع باستخدام flexbox
+============================= */
 .card.h-100 {
     display: flex;
     flex-direction: column;
 }
+
 .card.h-100 .card-body {
     display: flex;
     flex-direction: column;
+    flex-grow: 1; /* ليملأ مساحة البطاقة */
 }
 
-/* Enroll button that is already done (secondary state) */
+/* =============================
+   أزرار التسجيل (Enroll Button)
+   حالة غير مفعّل - Disabled state
+============================= */
 .btn-secondary[disabled] {
-    opacity: 1;
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
-/* Optional hero background on index page */
+/* =============================
+   خلفية الصفحة الرئيسية (index page)
+   مع تدرج لوني أنيق وخط واضح
+============================= */
 body.index-hero {
     background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
     color: #fff;
+    min-height: 100vh;
 }
 
-/* Footer quick‑nav buttons spacing on small screens */
+/* =============================
+   أزرار التنقل السريعة في التذييل
+   مسافات مناسبة للأجهزة الصغيرة
+============================= */
 footer .btn-group .btn {
-    margin-left: .25rem;
+    margin-left: 0.25rem;
 }
 
-/* Form validation feedback (Bootstrap 5 util) */
+/* =============================
+   التحقق من صحة النماذج - Form Validation (Bootstrap 5)
+============================= */
 .was-validated .form-control:invalid,
 .form-control.is-invalid {
-    border-color: #dc3545;
+    border-color: #dc3545; /* أحمر */
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25); /* ظل أحمر خفيف */
 }
+
 .was-validated .form-control:valid,
 .form-control.is-valid {
-    border-color: #198754;
+    border-color: #198754; /* أخضر */
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25); /* ظل أخضر خفيف */
+}
+
+/* =============================
+   تحسينات إضافية للزر Toast (إن أردت)
+============================= */
+.toast {
+    border-radius: 0.375rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
+/* في الوضع الداكن: لون الخلفية والتنبيه */
+:root[data-theme="dark"] .toast {
+    background-color: #333;
+    color: #e1e1e1;
+}
+
+/* زر إغلاق التنبيه */
+.toast .btn-close {
+    filter: invert(1); /* يظهر زر الإغلاق باللون الأبيض في الداكن */
 }
