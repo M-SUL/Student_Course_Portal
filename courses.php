@@ -21,7 +21,7 @@ if ($loggedIn) {
 const isLoggedIn = <?php echo $loggedIn ? 'true' : 'false'; ?>;
 const enrolledCourses = <?php echo json_encode($enrolledCourses); ?>;
 
-fetch('/student-portal/api/courses.php')
+fetch('/api/courses.php')
   .then(r => {
       if (!r.ok) {
           throw new Error(`HTTP error! status: ${r.status}`);
@@ -76,7 +76,7 @@ document.addEventListener('click', e => {
     const btn = e.target.closest('.enroll-btn');
     if (!btn) return;
 
-    fetch('/student-portal/ajax/enroll.php', {
+    fetch('/ajax/enroll.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ course_id: btn.dataset.id })

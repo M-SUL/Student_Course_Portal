@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user && password_verify($pass, $user['password'])) {
             $_SESSION['student_id'] = $user['id'];
             $_SESSION['student_name'] = $user['name'];
-            header('Location: /student-portal/dashboard.php');
+            header('Location: /dashboard.php');
             exit;
         } else {
             $err = 'Invalid email or password.';

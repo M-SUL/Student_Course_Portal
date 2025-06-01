@@ -4,7 +4,7 @@ require __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/db.php';
 
 if (empty($_SESSION['student_id'])) {
-    header('Location: /student-portal/login.php');
+    header('Location: login.php');
     exit;
 }
 
