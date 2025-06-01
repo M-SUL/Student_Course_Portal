@@ -51,7 +51,7 @@ fetch('/api/courses.php')
                 <i class="bi ${isEnrolled ? 'bi-x-circle' : 'bi-plus-circle'}"></i> 
                 ${isEnrolled ? 'Cancel Enrollment' : 'Enroll'}
                </button>`
-            : `<a href="/student-portal/login.php" class="btn btn-primary mt-2">
+            : `<a href="/login.php" class="btn btn-primary mt-2">
                 <i class="bi bi-box-arrow-in-right"></i> Login to Enroll
                </a>`;
           col.innerHTML = `

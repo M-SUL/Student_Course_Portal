@@ -4,7 +4,7 @@ require_once __DIR__ . '/../db.php';
 
 // Only allow admins to access this page
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /student-portal/admin/login.php');
+    header('Location: /admin/login.php');
     exit;
 }
 
@@ -142,17 +142,17 @@ require_once __DIR__ . '/includes/header.php';
     <div class="card-body">
         <div class="row g-3">
             <div class="col-md-4">
-                <a href="/student-portal/admin/course_crud.php" class="btn btn-primary w-100">
+                <a href="/admin/course_crud.php" class="btn btn-primary w-100">
                     <i class="bi bi-book"></i> Manage Courses
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="/student-portal/admin/register.php" class="btn btn-success w-100">
+                <a href="/admin/register.php" class="btn btn-success w-100">
                     <i class="bi bi-person-plus"></i> Register Admin
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="/student-portal/index.php" class="btn btn-info w-100">
+                <a href="/index.php" class="btn btn-info w-100">
                     <i class="bi bi-house"></i> View Portal
                 </a>
             </div>

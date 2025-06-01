@@ -6,18 +6,18 @@
     <span>&copy; <?= htmlspecialchars(date('Y')) ?> Student Course Portal</span>
     <!-- quick nav buttons for smaller screens -->
     <div class="btn-group" role="group" aria-label="Footer navigation">
-      <a href="/student-portal/index.php" class="btn btn-outline-light btn-sm" aria-label="Home">
+      <a href="/index.php" class="btn btn-outline-light btn-sm" aria-label="Home">
         <i class="bi bi-house"></i>
       </a>
-      <a href="/student-portal/courses.php" class="btn btn-outline-light btn-sm" aria-label="Courses">
+      <a href="/courses.php" class="btn btn-outline-light btn-sm" aria-label="Courses">
         <i class="bi bi-journal-bookmark"></i>
       </a>
       <?php if (empty($_SESSION['student_id'])): ?>
-        <a href="/student-portal/login.php" class="btn btn-outline-light btn-sm" aria-label="Login">
+        <a href="/login.php" class="btn btn-outline-light btn-sm" aria-label="Login">
           <i class="bi bi-box-arrow-in-right"></i>
         </a>
       <?php else: ?>
-        <a href="/student-portal/dashboard.php" class="btn btn-outline-light btn-sm" aria-label="Dashboard">
+        <a href="/dashboard.php" class="btn btn-outline-light btn-sm" aria-label="Dashboard">
           <i class="bi bi-speedometer2"></i>
         </a>
       <?php endif; ?>

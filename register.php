@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare("INSERT INTO students (name,email,password) VALUES (?,?,?)");
         try {
             $stmt->execute([$name, $email, $hash]);
-            header('Location: /student-portal/login.php?registered=1');
+            header('Location: /login.php?registered=1');
             exit;
         } catch (PDOException $e) {
             $errors[] = 'Email already exists.';

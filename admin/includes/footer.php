@@ -7,7 +7,7 @@
                     <p class="mb-0">&copy; <?= date('Y') ?> Student Portal Admin</p>
                 </div>
                 <div class="col-md-6 text-end">
-                    <a href="/student-portal/index.php" class="text-light text-decoration-none">
+                    <a href="/index.php" class="text-light text-decoration-none">
                         <i class="bi bi-house"></i> View Student Portal
                     </a>
                 </div>
@@ -15,6 +15,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/student-portal/js/theme.js"></script>
+    <script src="/js/theme.js"></script>
 </body>
 </html> 

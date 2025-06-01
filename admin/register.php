@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $pdo->prepare("INSERT INTO admins (email, password) VALUES (?, ?)");
             try {
                 $stmt->execute([$email, $hash]);
-                $success = 'Admin registered successfully. You can now <a href="/student-portal/admin/login.php">login here</a>.';
+                $success = 'Admin registered successfully. You can now <a href="/admin/login.php">login here</a>.';
             } catch (PDOException $e) {
                 $errors[] = 'Error creating admin account.';
             }
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Register New Admin</title>
-    <link href="/student-portal/assets/style.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 </div>
                 <div class="text-center mt-3">
-                    <a href="/student-portal/admin/login.php" class="text-decoration-none">
+                    <a href="/admin/login.php" class="text-decoration-none">
                         <i class="bi bi-box-arrow-in-right"></i> Already have an account? Login here
                     </a>
                 </div>

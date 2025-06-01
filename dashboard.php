@@ -58,7 +58,7 @@ try {
             <p class="lead text-muted">Track your learning progress and manage your courses.</p>
         </div>
         <div class="col-md-4 text-md-end">
-            <a href="/student-portal/courses.php" class="btn btn-primary">
+            <a href="/courses.php" class="btn btn-primary">
                 <i class="bi bi-plus-circle"></i> Browse Courses
             </a>
         </div>
@@ -119,7 +119,7 @@ try {
                         <div class="text-center py-4">
                             <i class="bi bi-book text-muted fs-1"></i>
                             <p class="mt-3">You haven't enrolled in any courses yet.</p>
-                            <a href="/student-portal/courses.php" class="btn btn-primary">Browse Courses</a>
+                            <a href="/courses.php" class="btn btn-primary">Browse Courses</a>
                         </div>
                     <?php else: ?>
                         <div class="table-responsive">

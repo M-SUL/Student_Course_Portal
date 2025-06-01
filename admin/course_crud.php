@@ -4,7 +4,7 @@ require_once __DIR__ . '/../db.php';
 
 // Only allow admins to access this page
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /student-portal/admin/login.php');
+    header('Location: /admin/login.php');
     exit;
 }
 

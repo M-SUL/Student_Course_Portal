@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($admin && password_verify($pass, $admin['password'])) {
             $_SESSION['user_id'] = $admin['id'];
             $_SESSION['role'] = 'admin';
-            header('Location: /student-portal/admin/index.php');
+            header('Location: /admin/index.php');
             exit;
         } else {
             $err = 'Invalid email or password.';
@@ -30,18 +30,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Admin Login - Student Portal</title>
-    <link href="/student-portal/assets/style.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/student-portal/index.php">
+            <a class="navbar-brand" href="/index.php">
                 <i class="bi bi-mortarboard"></i> Student Portal
             </a>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/student-portal/index.php">
+                <a class="nav-link" href="/index.php">
                     <i class="bi bi-house"></i> Back to Portal
                 </a>
             </div>

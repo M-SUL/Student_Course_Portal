@@ -83,7 +83,7 @@ A comprehensive learning management system built with PHP and MySQL, featuring a
 
 5. **Access the Portal**
    - Student Portal: `http://localhost/student-portal`
-   - Admin Portal: `http://localhost/student-portal/admin`
+   - Admin Portal: `http://localhost/admin`
 
 ## Default Login Credentials
 
@@ -126,7 +126,7 @@ Register a new account like:
 ### For Administrators
 
 1. **Login**
-   - Access the admin portal at `http://localhost/student-portal/admin`
+   - Access the admin portal at `http://localhost/admin`
    - Enter admin credentials
    - Click "Login"
 
